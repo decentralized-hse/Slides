@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>BitTorrent: P2P + Merkle trees</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/night.css" id="theme">
+		<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/zenburn.min.css" id="highlight-theme"></head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+<section data-markdown  ><textarea data-template>
+
+#   BitTorrent: P2P + Merkle trees
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+
+### Обстановка в 2000
+
+ 1. P2P в 2000
+ 2. MPAA и рынок
+ 3. MojoNation, Bram Cohen
+ 4. успех
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Устройство BitTorrent
+ 1. рой 
+![bittorrent](media/swarm_view.jpg) <!-- .element: style="float:right; width: 70%; margin: 10px; " -->
+ 2. кусочки
+ 3. метаданные
+ 4. алгоритмы
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Merkle tree
+![bittorrent](media/binary.png) <!-- .element: style="float:right; width: 100%;" -->
+
+ 1. BitTorrent Merkle tree
+ 2. Binary Merkle tree
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Rarest first
+
+ 1. swarm bw
+![bittorrent](media/swarm_view.jpg) <!-- .element: style="float:right; width: 70%; margin: 10px; " -->
+ 2. 99%
+ 3. rarest first
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Tit for tat
+
+ 1. хитрецы
+![bittorrent](media/swarm_view.jpg) <!-- .element: style="float:right; width: 80%;" -->
+ 2. tit for tat
+ 3. BitTyrant etc
+ 4. LEDBAT
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Трекинг
+
+![bittorrent](media/The_Pirate_Bay.png) <!-- .element: style="float:right; width: 50%;" -->
+ 1. трекеры (сайты)
+ 2. PEX
+ 3. DHT Kademlia
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Сложности и ограничения
+
+ 1. редкий контент
+ 2. торрент файлы
+ 3. циклы инициализации
+ 4. экономика
+
+</textarea></section>
+<section data-markdown  ><textarea data-template>
+### Развитие 
+
+ 1. RFC 7574
+ 2. IPFS
+ 3. BitTorrent v2
+
+</textarea></section>
+<section data-markdown ><textarea data-template>
+### Результаты
+
+ 1. Hulu
+ 2. Netflix
+ 3. iTunes
+
+</textarea></section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+Reveal.initialize({
+controls : false,
+markdown : {smartypants: true},
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
