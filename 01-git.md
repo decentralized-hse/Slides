@@ -2,80 +2,87 @@
 
 #   GIT и системы контроля версий
 
-[comment]: # (!!!)
-![backdoor attempt](media/backdoor.png) <!-- .element: style="float:right; width: 100%;" -->
+----
+
+![bg fit](media/backdoor.png)
+
+----
+##  Обстоятельства
 
  1. очень распределённый процесс разработки, 
- 2. очень высокие ставки (supply chain attack),
+ 2. очень высокие ставки ([supply chain attack][a]),
  3. очень большой массив кода,
- 4. нет изоляции (Таненбаум предупреждал).
+ 4. нет изоляции ([Таненбаум предупреждал][t]).
 
-[comment]: # (!!!)
+[a]: https://lwn.net/Articles/57135/
+[t]: https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate
 
+----
 ### Prior art
 
-![gitca](media/linus-scale.png) <!-- .element: style="float:right; width: 50%;" -->
+![bg right](media/linus-scale.png)
+
  1. tarballs
- 2. CVS
- 3. BitKeeper
+ 2. [CVS][c], [SVN][s]
+ 3. [BitKeeper][b]
 
-[comment]: # (!!!)
+[s]: http://subversion.apache.org
+[b]: http://www.bitkeeper.org
+[c]: https://www.nongnu.org/cvs/ 
 
+----
 ### Внутреннее устройство
-![gitca](media/gitca.png) <!-- .element: style="width: 80%;" -->
+![bg right fit](media/gitca.png)
 
- 1. blobs
+ 1. [blobs][o]
  2. trees
  3. commits
 
-[comment]: # (!!!)
+[o]: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
 
+----
 ### Persistent data structures
 
-![persistent d.s.](media/persistent.png) <!-- .element: style="width: 50%; float: right;" -->
+![bg right:60% fit](media/persistent.png)
 
  1. partially
  2. fully
  3. confluently
 
-[comment]: # (!!!)
+----
 ### Меркелевы деревья
 
-![merkel](media/merkel.png) <!-- .element: style="float:right; width: 50%;" -->
+![bg right:60% fit](media/merkel.png)
+
  1. хэш-функции
  2. деревья М.
  3. Merkle DAG
 
-[comment]: # (!!!)
-
+----
 ### Deltas and snapshots
 
-![weave](media/weave.png) <!-- .element: style="float:right; width: 50%;" -->
+![bg right fit](media/weave.png)
 
  1. snapshots
  2. patches/diffs/deltas
  3. weaves
 
-[comment]: # (!!!)
-
+----
 ### Myers
 
-![myers](media/myers.gif) <!-- .element: style="width: 70%;" -->
+![bg fit](media/myers.gif)
 
-[comment]: # (!!!)
-
+----
 ### Workflow
 
-![workflow](media/workflow.png) <!-- .element: style="width: 80%;" -->
+![bg fit](media/workflow.png)
 
-[comment]: # (!!!)
-
+----
 ### Complexity 
 
-![sloc](media/sloc.png) <!-- .element: style="width: 80%;" -->
+![bg fit](media/sloc.png)
 
-[comment]: # (!!!)
-
+----
 ### Практика 
 
 ````bash [1|2-3|4-5|6|7|8]
@@ -89,5 +96,4 @@ git commit -S -m 'short message'
 cat .git/objects/xy/z | openssl zlib -d 
 ````
 
-[comment]: # (!!!)
 
