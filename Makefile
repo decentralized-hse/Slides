@@ -1,5 +1,5 @@
 %.html: %.md
-	marp $<
+	marp --html $<
 
 MDS= $(wildcard *.md)
 HTMLS = $(patsubst %.md,%.html,$(MDS))
